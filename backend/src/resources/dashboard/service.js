@@ -1,10 +1,16 @@
 const axios = require('axios');
 const baseURL = 'https://corona.lmao.ninja/v2';
 
-const fetchData = (route, params) => {
+const fetchData = (route, query, pathParam) => {
+    
+    const normalizePathParam = param => {
+        return param ? `/${param}` : '';
+    }
+
     return new Promise(async (resolve, reject) => {
         try {
-            const { data } = await axios.get(`${baseURL}${route}`, { ...params});
+            const url =  `${baseURL}${route}` + normalizePathParam(pathParam);
+            const { data } = await axios.get(url, { ...query });
             resolve(data);
         } catch (error) {
             reject(error);
@@ -12,18 +18,12 @@ const fetchData = (route, params) => {
     })
 }
 
-
-const buildDashboardInformation = async ({ country = null}) => {
-
-    const normalizePathParam = param => {
-        return param ? `/${country}` : ''
-    }
+const getAll = async () => {
     
     const [ world, countries ] =  await Promise.all([
         fetchData('/all'),
-        fetchData('/countries' + normalizePathParam(country) ),
+        fetchData('/countries'),
     ])
-
 
     return {
         world,
@@ -31,6 +31,18 @@ const buildDashboardInformation = async ({ country = null}) => {
     }
 }
 
+const getCountries = async ({ country = null}) => {
+    const countries = await fetchData('/countries', null, country);
+    return countries;
+}
+
+const getWorld = async () => {
+    const countries = await fetchData('/all', null, null);
+    return countries;
+}
+
 module.exports = {
-    buildDashboardInformation,
+    getAll,
+    getCountries,
+    getWorld,
 }
