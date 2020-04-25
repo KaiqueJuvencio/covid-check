@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  postgres:
+    network_mode: host
+    image: postgres
+    volumes:
+      - $HOME/docker/volumes/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+        - POSTGRES_DB=postgres
+        - POSTGRES_PASSWORD=postgres
+        - PGDATA=/tmp
+  backend:
+    network_mode: host
+    build: .
+    entrypoint: node src/bin/server.js
+    volumes:
+      - .:/backend
+      - /backend/node_modules
+    environment:
+      - NODE_ENV=test
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
