@@ -1,0 +1,136 @@
+.prevention-container{
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prevention-container .content{
+    width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.prevention-container .content .prevention-description{
+    width: 100%;
+    padding: 70px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    line-height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prevention-container .content section{
+    width: 100%;
+    max-width: 380px;
+}
+
+.prevention-container .content section h1{
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.prevention-container .content section h3{
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.prevention-container .content form{
+    width: 100%;
+    max-width: 450px;
+
+}
+
+.prevention-container .content section p{
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.prevention-container .content form input,
+.prevention-container .content form textarea{
+    margin-top: 8px;
+}
+
+body { font-family: Helvetica; }
+
+.prevention-container .content .prevention-description p {
+  border-top: 2px dashed;
+  border-color: #e02041 !important;
+  margin:0; padding: 30px;
+  counter-increment: section;
+  position: relative;
+}
+
+.prevention-container .content .prevention-description p:nth-child(even):before {
+  content: counter(section);
+  right: 100%; 
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: #e02041;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+
+.prevention-container .content .prevention-description p:nth-child(odd):before {
+  content: counter(section);
+  left: 100%; 
+  margin-left: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: #e02041;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+
+.prevention-container .content .prevention-description p:nth-child(even) {
+  border-left: 2px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px; 
+  padding-right: 0;
+}
+
+.prevention-container .content .prevention-description p:nth-child(odd) {
+  border-right: 2px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px; 
+  padding-left: 0;
+}
+
+.prevention-container .content .prevention-description p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+.prevention-container .content .prevention-description p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
