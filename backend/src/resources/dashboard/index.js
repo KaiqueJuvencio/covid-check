@@ -2,7 +2,7 @@ const service = require("./service");
 
 const index = async (req, res, next) => {
   try {
-    const response = await service.getAll();
+    const response = await service.buildDashboardInformation();
 
     return res.status(200).send(response);
   } catch (error) { 

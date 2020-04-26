@@ -18,11 +18,11 @@ const fetchData = (route, query, pathParam) => {
     })
 }
 
-const getAll = async () => {
+const buildDashboardInformation = async () => {
     
     const [ world, countries ] =  await Promise.all([
         fetchData('/all'),
-        fetchData('/countries'),
+        fetchData('/countries', null, 'brazil'),
     ])
 
     return {
@@ -42,7 +42,7 @@ const getWorld = async () => {
 }
 
 module.exports = {
-    getAll,
+    buildDashboardInformation,
     getCountries,
     getWorld,
 }
