@@ -1,13 +1,16 @@
  
-.PHONY: default all clean database
+.PHONY: default all build clean database
 
-default: all
+default: build all
+
+build:
+	@docker-compose build --no-cache
 
 all:
-	sudo docker-compose up --build backend
+	@docker-compose up backend
 
 database:
-	sudo docker-compose up -d postgres
+	@docker-compose up -d postgres
 
 clean:
-	sudo docker-compose down --rmi all
+	@docker-compose down --rmi all
