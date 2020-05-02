@@ -25,3 +25,35 @@
     margin-bottom: 32px;
 }
 
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th{
+    text-align: center;
+    padding: 7px;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+
+th, td{
+    border-bottom: 1px solid #e02041;
+}
+
+tr:hover{background-color:#f8d7d7;}
+
+.global-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.global-icon h2{
+    padding-left: 3px;
+}

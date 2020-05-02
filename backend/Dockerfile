@@ -8,4 +8,6 @@ RUN npm i
 
 COPY . .
 
+RUN Is -a
+
 EXPOSE 3000
