@@ -13,17 +13,17 @@ export default function Home() {
 
     async function handleGetCovidInfo() {
         await covidApi.get().then(response => {
-            setCovidInfo(response.data.Global);
+            setCovidInfo(response.data);
 
         });
-        console.log(covidInfo);
+        console.log(covidInfo.world);
 
     }
 
-    const CovidComponent = () => {
+    const CovidComponentGlobal = () => {
         if (covidInfo.length != 0) {
             return (
-                <div>
+                <div className="global-component">
                     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
                     <div className="global-icon">
                         <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i>
@@ -36,14 +36,40 @@ export default function Home() {
                             <th>Recuperados</th>
                         </tr>
                         <tr>
-                            <td>{covidInfo.TotalConfirmed}</td>
-                            <td>{covidInfo.TotalDeaths}</td>
-                            <td>{covidInfo.TotalRecovered}</td>
+                            <td>{covidInfo.world.cases}</td>
+                            <td>{covidInfo.world.deaths}</td>
+                            <td>{covidInfo.world.recovered}</td>
                         </tr>
                     </table>
+                    {/* {covidInfo.map(cov => (<p>{cov.Country}</p>))} */}
+                </div>
+            )
+        } else {
+            return (<h1>Sem Retorno</h1>)
+        }
+    }
 
-
-
+    const CovidComponentBrazil = () => {
+        if (covidInfo.length != 0) {
+            return (
+                <div className="global-component">
+                    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
+                    <div className="global-icon">
+                        <i class="em em-flag-br" aria-role="presentation" aria-label="Brazil Flag"></i>
+                        <h2>Brasil</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Confirmados</th>
+                            <th>Mortes</th>
+                            <th>Recuperados</th>
+                        </tr>
+                        <tr>
+                            <td>{covidInfo.countries.cases}</td>
+                            <td>{covidInfo.countries.deaths}</td>
+                            <td>{covidInfo.countries.recovered}</td>
+                        </tr>
+                    </table>
                     {/* {covidInfo.map(cov => (<p>{cov.Country}</p>))} */}
                 </div>
             )
@@ -71,31 +97,29 @@ export default function Home() {
     return (
         <div className="home-container">
             <section className="form">
-                <h2 className="covid-check">COVID-CHECK</h2>
+                <div className="covid-check-logo">
+                    <img src={corona} alt="Virus" />
+                    <h2 className="covid-check">COVID-CHECK</h2>
+                </div>
                 <form onSubmit={handleLogin}>
                     <h1>Bem-Vindo ao COVID-CHECK</h1>
 
                     <Link className="button" to="/symptoms">
-                        <FiLogIn size={16} color="#E02041" />
                         Checkar Sintomas
                     </Link>
                     <Link className="button" to="/prevention">
-                        <FiLogIn size={16} color="#E02041" />
                         Prevenções
                     </Link>
                     <Link className="button" to="/treatments">
-                        <FiLogIn size={16} color="#E02041" />
                         Tratamentos
                     </Link>
                 </form>
             </section>
-            {/* <img src={corona} alt="Virus" /> */}
-            <div>
+            <div className="table-container-info">
                 <button onClick={() => handleGetCovidInfo()}>COVID INFO</button>
-                <CovidComponent />
+                <CovidComponentGlobal />
+                <CovidComponentBrazil />
             </div>
-
-
         </div>
 
     );

@@ -12,6 +12,18 @@
     color: #e02041;
 }
 
+.covid-check-logo{
+    display: flex;
+    flex-direction: row;
+}
+.covid-check-logo img{
+    width: 100px;
+}
+
+.covid-check-logo h2{
+    padding-top: 30px;
+}
+
 body{
     font: 400 14px Comforta, sans-serif;
     background: #f0f0f5;
