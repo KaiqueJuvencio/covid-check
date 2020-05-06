@@ -2,22 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import "./styles.css";
+import Home from '../Home';
 
 export default function SymptomsCheck() {
-
+    var teste = '/a';
     function checkVerified() {
         var checkSymptoms = document.getElementsByName("check-symptom");
         var grave = false;
+        
 
         for (var i = 0; i < checkSymptoms.length; i++) {
             if (checkSymptoms[i].checked == true && (checkSymptoms[i].id == "febre-alta" || checkSymptoms[i].id == "pneumonia" || checkSymptoms[i].id == "dificuldade-respirar")) {
                 console.log(checkSymptoms[i].id);
-                alert('Grave');
                 grave = true;
+                teste = '/checkresult/severe';
+                return teste;
             }
         }
         if (grave == false) {
-            alert("Sintomas Comum");
+            teste = '/checkresult/comum';
+            return teste;
         }
     }
 
@@ -73,7 +77,9 @@ export default function SymptomsCheck() {
                             <input type="checkbox" id="dificuldade-respirar" value="dificuldade-respirar" name="check-symptom" />
                             <label htmlFor="dificuldade-respirar">Dificuldade de Respirar</label>
                         </div>
-                        <button className="button" type="submit">Checkar</button>
+                        <Link className="button" to={checkVerified}>
+                            Checkar
+                        </Link>
                     </form>
                 </div>
             </div>
