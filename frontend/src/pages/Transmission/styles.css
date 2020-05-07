@@ -5,11 +5,8 @@
     display: -webkit-flex;
     display: flex;
   } */
-  .transmission-covid-check{
-    font-size: 30px;
-    color: #E02041;
-}
-.transmission-container{
+
+  .transmission-container{
     width: 100%;
     max-width: 1120px;
     height: 100vh;
@@ -29,38 +26,17 @@
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
 
-}
-
-.transmission-container .content .check label{
-    position: absolute;
-    margin-left: 10px;
-    margin-top: -2px;
-}
-
-.transmission-container .content .check{
-    width: 100%;
-    padding: 70px;
-    background: #ff6d92;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    line-height: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .transmission-container .content section{
     width: 100%;
-    max-width: 800px;
 }
 
 .transmission-container .content section h1{
     margin: 64px 0 32px;
     font-size: 32px;
-    padding-left: 10px;
 }
 
 .transmission-container .content section p{
@@ -69,44 +45,26 @@
     line-height: 32px;
 }
 
-.transmission-container .content form{
-    width: 100%;
-    max-width: 450px;
-
-}
-
-.transmission-container .content form input{
-    margin-top: 8px;
-}
-
-.transmission-container .content form .input-group{
-    display: flex;
-    
-}
-
-.transmission-container .content form .input-group input + input{
-    margin-left: 8px;
-}
-
 .check-in-descricao{
     margin-right: 10px;
 }
 
-.check-in-descricao-procure{
-    margin-right: 10px;
-    padding-bottom: 2%;
-}
 @media (max-width: 767px) {
-
+  .transmission-container .content section h1{
+    padding-left: 6%;
+  }
+  .transmission-container .content section p{
+    padding-left: 6%;
+    margin: 0 auto;
 }
 
-.transmission-back-link{
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    color: #000000;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.2s;
+    .transmission-container .content {
+        padding: 0px;
+        height: 100vh;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
 }

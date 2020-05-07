@@ -32,7 +32,7 @@ export default class Home extends Component {
         return (
             <div className="home-container">
                 <section className="form">
-                    <div className="covid-check-logo">
+                    <div className="covid-check-logo-home">
                         <img src={corona} className="App-logo" alt="Virus" />
                         <h2 className="covid-check">COVID-CHECK</h2>
                     </div>

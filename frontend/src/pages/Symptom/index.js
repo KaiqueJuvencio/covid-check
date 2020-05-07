@@ -12,10 +12,8 @@ export default function SymptomsCheck() {
 
 
         for (var i = 0; i < checkSymptoms.length; i++) {
-            console.log(checkSymptoms[i].id);
             if (checkSymptoms[i].checked === true && (checkSymptoms[i].id === "febre-alta" || checkSymptoms[i].id === "pneumonia" || checkSymptoms[i].id === "dificuldade-respirar" || checkSymptoms[i].id === "one")) {
                 severe = true;
-
                 checkResultPage = '/checkresult/severe';
                 return checkResultPage;
             }

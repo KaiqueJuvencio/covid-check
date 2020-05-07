@@ -1,4 +1,12 @@
-.prevention-container{
+/* .flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  } */
+
+  .prevention-container{
     width: 100%;
     max-width: 1120px;
     height: 100vh;
@@ -9,7 +17,7 @@
     justify-content: center;
 }
 
-.prevention-container .content{
+.prevention-container .content {
     width: 100%;
     padding: 96px;
     background: #f0f0f5;
@@ -17,12 +25,18 @@
     border-radius: 8px;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
 
 }
 
-.prevention-container .content .prevention-description{
+.prevention-container .content .check label{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+.prevention-container .content .check{
     width: 100%;
     padding: 70px;
     background: #f0f0f5;
@@ -35,6 +49,7 @@
     justify-content: space-between;
 }
 
+
 .prevention-container .content section{
     width: 100%;
     max-width: 380px;
@@ -45,7 +60,7 @@
     font-size: 32px;
 }
 
-.prevention-container .content section h3{
+.prevention-container .content section p{
     font-size: 18px;
     color: #737380;
     line-height: 32px;
@@ -57,15 +72,30 @@
 
 }
 
-.prevention-container .content section p{
-    font-size: 18px;
-    color: #737380;
-    line-height: 32px;
-}
 
-.prevention-container .content form input,
-.prevention-container .content form textarea{
-    margin-top: 8px;
+@media (max-width: 767px) {
+  .prevention-container .content section h1{
+    padding-left: 6%;
+  }
+  .prevention-container .content section p{
+    padding-left: 6%;
+    margin: 0 auto;
+}
+  .prevention-container .content form{
+    width: 100%;
+    max-width: 450px;
+    padding: 6%;
+  }
+
+    .prevention-container .content {
+        padding: 0px;
+        height: 100vh;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .prevention-container .content .check{
+      padding: 0px;
+  }
 }
 
 body { font-family: Helvetica; }
@@ -76,6 +106,18 @@ body { font-family: Helvetica; }
   margin:0; padding: 30px;
   counter-increment: section;
   position: relative;
+}
+.prevention-container .content .prevention-description{
+  width: 100%;
+  padding: 70px;
+  background: #f0f0f5;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .prevention-container .content .prevention-description p:nth-child(even):before {

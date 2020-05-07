@@ -18,14 +18,11 @@ export default function Transmission() {
                     <p className="check-in-descricao-procure">A principal forma de contágio do novo coronavírus é o contato com uma pessoa infectada, que transmite o vírus por meio de tosse e espirros.</p>
                     <p className="check-in-descricao-procure">Ele também se propaga quando a pessoa toca em uma superfície ou objeto contaminado e depois nos olhos, nariz ou boca.</p>
 
-                    <Link className="transmission-back-link" to="/">
+                    <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#E02041" />
                         Voltar
                     </Link>
                 </section>
-                {/* <div className="check">
-                    <p>GRAVE</p>
-                </div> */}
             </div>
         </div>
     )

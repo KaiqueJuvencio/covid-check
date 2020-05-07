@@ -33,25 +33,6 @@
 
 }
 
-.severe-symptoms-container .content .check label{
-    position: absolute;
-    margin-left: 10px;
-    margin-top: -2px;
-}
-
-.severe-symptoms-container .content .check{
-    width: 100%;
-    padding: 70px;
-    background: #ff6d92;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    line-height: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .severe-symptoms-container .content section{
     width: 100%;
     max-width: 800px;
@@ -69,35 +50,23 @@
     line-height: 32px;
 }
 
-.severe-symptoms-container .content form{
-    width: 100%;
-    max-width: 450px;
-
-}
-
-.severe-symptoms-container .content form input{
-    margin-top: 8px;
-}
-
-.severe-symptoms-container .content form .input-group{
-    display: flex;
-    
-}
-
-.severe-symptoms-container .content form .input-group input + input{
-    margin-left: 8px;
-}
-
-.check-in-descricao{
+.check-in-descricao-phrase2{
     margin-right: 10px;
 }
 
-.check-in-descricao-procure{
+.check-in-descricao-phrase1{
     margin-right: 10px;
     padding-bottom: 2%;
 }
-@media (max-width: 767px) {
 
+@media (max-width: 767px) {
+    .severe-symptoms-container .content {
+        padding: 6%;
+        height: 100%;
+    }
+    .severe-symptoms-container .content {
+        border-radius: 0px;
+    }
 }
 
 .severe-symptoms-back-link{

@@ -26,9 +26,6 @@ export default function ComumSymptom() {
                         Voltar
                     </Link>
                 </section>
-                {/* <div className="check">
-                    <p>GRAVE</p>
-                </div> */}
             </div>
         </div>
     )
