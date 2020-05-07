@@ -111,6 +111,7 @@ form textarea{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 20px;
     }
     .covid-check-logo h2{
         padding-top: 0px;

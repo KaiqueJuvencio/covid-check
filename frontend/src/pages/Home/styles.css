@@ -92,6 +92,7 @@ tr:hover{background-color:#f3bdc6;}
     flex-direction: column;
     align-items: center;
     padding-left: 12%;
+    padding-top: 20px;
   } 
   .covid-check-logo-home h2{
     padding-top: 0px;
