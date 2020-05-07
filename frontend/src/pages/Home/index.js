@@ -13,8 +13,8 @@ export default class Home extends Component {
         };
     }
 
-    handleGetCovidInfo() {
-        covidApi.get().then(response => {
+    async handleGetCovidInfo() {
+        await covidApi.get().then(response => {
             const covidInfoBrazil = response.data.countries
             const covidInfoWorld = response.data.world
             this.setState({
@@ -35,7 +35,7 @@ export default class Home extends Component {
             <div className="home-container">
                 <section className="form">
                     <div className="covid-check-logo">
-                        <img src={corona} alt="Virus" />
+                        <img src={corona} className="App-logo" alt="Virus" />
                         <h2 className="covid-check">COVID-CHECK</h2>
                     </div>
                     <form>
@@ -47,8 +47,8 @@ export default class Home extends Component {
                         <Link className="button" to="/prevention">
                             Prevenções
                     </Link>
-                        <Link className="button" to="/treatments">
-                            Tratamentos
+                        <Link className="button" to="/transmission">
+                            Transmissão
                     </Link>
                     </form>
                 </section>

@@ -1,12 +1,15 @@
-.flex {
+/* .flex {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-  }
-
-.symptoms-container{
+  } */
+  .transmission-covid-check{
+    font-size: 30px;
+    color: #E02041;
+}
+.transmission-container{
     width: 100%;
     max-width: 1120px;
     height: 100vh;
@@ -17,40 +20,29 @@
     justify-content: center;
 }
 
-.prevention-container .content .treatment-description{
-    width: 100%;
-    padding: 70px;
-    background: #f0f0f5;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    line-height: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.symptoms-container .content {
+.transmission-container .content {
     width: 100%;
     padding: 96px;
     background: #f0f0f5;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
+    display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
 
 }
 
-.symptoms-container .content .check label{
+.transmission-container .content .check label{
     position: absolute;
     margin-left: 10px;
     margin-top: -2px;
 }
 
-.symptoms-container .content .check{
+.transmission-container .content .check{
     width: 100%;
     padding: 70px;
-    background: #f0f0f5;
+    background: #ff6d92;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     line-height: 30px;
@@ -60,41 +52,61 @@
     justify-content: space-between;
 }
 
-.symptoms-container .content section{
+.transmission-container .content section{
     width: 100%;
-    max-width: 380px;
+    max-width: 800px;
 }
 
-.symptoms-container .content section h1{
+.transmission-container .content section h1{
     margin: 64px 0 32px;
     font-size: 32px;
+    padding-left: 10px;
 }
 
-.symptoms-container .content section p{
+.transmission-container .content section p{
     font-size: 18px;
     color: #737380;
     line-height: 32px;
 }
 
-.symptoms-container .content form{
+.transmission-container .content form{
     width: 100%;
     max-width: 450px;
 
 }
 
-.symptoms-container .content form input{
+.transmission-container .content form input{
     margin-top: 8px;
 }
 
-.symptoms-container .content form .input-group{
+.transmission-container .content form .input-group{
     display: flex;
     
 }
 
-.symptoms-container .content form .input-group input + input{
+.transmission-container .content form .input-group input + input{
     margin-left: 8px;
 }
 
 .check-in-descricao{
     margin-right: 10px;
+}
+
+.check-in-descricao-procure{
+    margin-right: 10px;
+    padding-bottom: 2%;
+}
+@media (max-width: 767px) {
+
+}
+
+.transmission-back-link{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeft, FiCheckSquare } from 'react-icons/fi';
 import "./styles.css";
+import corona from '../../assets/corona.png'
 import Home from '../Home';
 
 export default function SymptomsCheck() {
@@ -9,7 +10,7 @@ export default function SymptomsCheck() {
     function checkVerified() {
         var checkSymptoms = document.getElementsByName("check-symptom");
         var grave = false;
-        
+
 
         for (var i = 0; i < checkSymptoms.length; i++) {
             if (checkSymptoms[i].checked == true && (checkSymptoms[i].id == "febre-alta" || checkSymptoms[i].id == "pneumonia" || checkSymptoms[i].id == "dificuldade-respirar")) {
@@ -28,9 +29,12 @@ export default function SymptomsCheck() {
         <div className="symptoms-container">
             <div className="content">
                 <section>
-                    <h2 className="covid-check">COVID-CHECK</h2>
+                    <div className="covid-check-logo">
+                        <img src={corona} className="App-logo" alt="Virus" />
+                        <h2 className="covid-check">COVID-CHECK</h2>
+                    </div>
 
-                    <h1>Check-in</h1>
+                    <h1><FiCheckSquare color="#E02041" />  Check-in</h1>
                     <p className="check-in-descricao">Marque as opções de acordo com os sintomas que está sentindo.</p>
 
                     <Link className="back-link" to="/">
