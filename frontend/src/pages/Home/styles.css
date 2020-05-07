@@ -76,12 +76,13 @@ tr:hover{background-color:#f3bdc6;}
   flex-direction: row;
 }
 .covid-check-logo-home img{
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 .covid-check-logo-home h2{
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-left: 5px;
 }
 
 /* Mobile */

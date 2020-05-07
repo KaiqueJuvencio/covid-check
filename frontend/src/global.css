@@ -17,12 +17,13 @@
     flex-direction: row;
 }
 .covid-check-logo img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .covid-check-logo h2{
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-left: 5px;
 }
 
 body{
