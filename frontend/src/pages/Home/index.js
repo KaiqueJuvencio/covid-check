@@ -21,8 +21,6 @@ export default class Home extends Component {
                 covidInfoBrazil,
                 covidInfoWorld
             })
-            console.log(this.state.covidInfoBrazil.cases)
-            console.log(this.state.covidInfoWorld.cases)
         });
     }
 
@@ -57,40 +55,48 @@ export default class Home extends Component {
                     <div className="global-component">
                         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
                         <div className="global-icon">
-                            <i class="em em-flag-br" aria-role="presentation" aria-label="Brazil Flag"></i>
+                            <i className="em em-flag-br" aria-label="Brazil Flag"></i>
                             <h2>Brasil</h2>
                         </div>
                         <table>
-                            <tr>
-                                <th>Confirmados</th>
-                                <th>Mortes</th>
-                                <th>Recuperados</th>
-                            </tr>
-                            <tr>
-                                <td>{this.state.covidInfoBrazil.cases}</td>
-                                <td>{this.state.covidInfoBrazil.deaths}</td>
-                                <td>{this.state.covidInfoBrazil.recovered}</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Confirmados</th>
+                                    <th>Mortes</th>
+                                    <th>Recuperados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{this.state.covidInfoBrazil.cases}</td>
+                                    <td>{this.state.covidInfoBrazil.deaths}</td>
+                                    <td>{this.state.covidInfoBrazil.recovered}</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
                     <div className="global-component">
                         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"></link>
                         <div className="global-icon">
-                            <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i>
+                            <i className="em em-globe_with_meridians" aria-label="GLOBE WITH MERIDIANS"></i>
                             <h2>Global</h2>
                         </div>
                         <table>
-                            <tr>
-                                <th>Confirmados</th>
-                                <th>Mortes</th>
-                                <th>Recuperados</th>
-                            </tr>
-                            <tr>
-                                <td>{this.state.covidInfoWorld.cases}</td>
-                                <td>{this.state.covidInfoWorld.deaths}</td>
-                                <td>{this.state.covidInfoWorld.recovered}</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Confirmados</th>
+                                    <th>Mortes</th>
+                                    <th>Recuperados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{this.state.covidInfoWorld.cases}</td>
+                                    <td>{this.state.covidInfoWorld.deaths}</td>
+                                    <td>{this.state.covidInfoWorld.recovered}</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

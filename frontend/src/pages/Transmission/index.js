@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiShare2 } from 'react-icons/fi';
 import "./styles.css";
 import corona from '../../assets/corona.png'

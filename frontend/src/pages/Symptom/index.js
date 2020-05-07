@@ -3,25 +3,26 @@ import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiCheckSquare } from 'react-icons/fi';
 import "./styles.css";
 import corona from '../../assets/corona.png'
-import Home from '../Home';
 
 export default function SymptomsCheck() {
-    var teste = '/a';
+    var checkResultPage = '/';
     function checkVerified() {
         var checkSymptoms = document.getElementsByName("check-symptom");
-        var grave = false;
+        var severe = false;
 
 
         for (var i = 0; i < checkSymptoms.length; i++) {
-            if (checkSymptoms[i].checked == true && (checkSymptoms[i].id == "febre-alta" || checkSymptoms[i].id == "pneumonia" || checkSymptoms[i].id == "dificuldade-respirar")) {
-                grave = true;
-                teste = '/checkresult/severe';
-                return teste;
+            console.log(checkSymptoms[i].id);
+            if (checkSymptoms[i].checked === true && (checkSymptoms[i].id === "febre-alta" || checkSymptoms[i].id === "pneumonia" || checkSymptoms[i].id === "dificuldade-respirar" || checkSymptoms[i].id === "one")) {
+                severe = true;
+
+                checkResultPage = '/checkresult/severe';
+                return checkResultPage;
             }
         }
-        if (grave == false) {
-            teste = '/checkresult/comum';
-            return teste;
+        if (severe === false) {
+            checkResultPage = '/checkresult/comum';
+            return checkResultPage;
         }
     }
 
@@ -45,40 +46,52 @@ export default function SymptomsCheck() {
                 <div className="check">
                     <form onSubmit={checkVerified}>
                         <div className="check-input">
-                            <input type="checkbox" id="tosse" name="check-symptom" value="tosse" />
-                            <label htmlFor="tosse">Tosse Seca</label>
+                            <label class="container">Tosse Seca
+                            <input type="checkbox" id="tosse" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="cansaco" value="cansaco" name="check-symptom" />
-                            <label htmlFor="cansaco">Cansaço</label>
+                            <label class="container">Cansaço
+                            <input type="checkbox" id="cansaco" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="febre" value="febre" name="check-symptom" />
-                            <label htmlFor="febre">Febre</label>
+                            <label class="container">Dor de Garganta
+                            <input type="checkbox" id="dor-garganta" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="dor-garganta" value="dor-garganta" name="check-symptom" />
-                            <label htmlFor="dor-garganta">Dor de Garganta</label>
+                            <label class="container">Nariz Congestionado
+                            <input type="checkbox" id="nariz-congestionado" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="nariz-congestionado" value="nariz-congestionado" name="check-symptom" />
-                            <label htmlFor="nariz-congestionado">Nariz Congestionado</label>
+                            <label class="container">Diarreia
+                            <input type="checkbox" id="diarreia" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="diarreia" value="diarreia" name="check-symptom" />
-                            <label htmlFor="diarreia">Diarreia</label>
+                            <label class="container">Febre Alta
+                            <input type="checkbox" id="febre-alta" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="febre-alta" value="febre-alta" name="check-symptom" />
-                            <label htmlFor="febre-alta">Febre Alta</label>
+                            <label class="container">Pneumonia
+                            <input type="checkbox" id="pneumonia" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <div className="check-input">
-                            <input type="checkbox" id="pneumonia" value="pneumonia" name="check-symptom" />
-                            <label htmlFor="pneumonia">Pneumonia</label>
-                        </div>
-                        <div className="check-input">
-                            <input type="checkbox" id="dificuldade-respirar" value="dificuldade-respirar" name="check-symptom" />
-                            <label htmlFor="dificuldade-respirar">Dificuldade de Respirar</label>
+                            <label class="container">Dificuldade de Respirar
+                            <input type="checkbox" id="dificuldade-respirar" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                         <Link className="button" to={checkVerified}>
                             Checkar
