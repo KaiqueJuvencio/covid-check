@@ -98,6 +98,7 @@ export default class Home extends Component {
                                 </tr>
                             </tbody>
                         </table>
+                        <h3 className="no-vaccine">Atualmente, não há uma vacina para prevenir o coronavírus (COVID-19).</h3>
                     </div>
                 </div>
             </div>
