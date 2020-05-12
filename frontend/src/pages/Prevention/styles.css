@@ -5,6 +5,15 @@
     display: -webkit-flex;
     display: flex;
   } */
+  .ao-sair{
+    padding: 30px;
+    font-size: 20px;
+  }
+
+  .link-mascara{
+    padding: 30px;
+  }
+
 
   .prevention-container{
     width: 100%;
@@ -20,6 +29,7 @@
 .prevention-container .content {
     width: 100%;
     padding: 96px;
+    padding-top: 650px;
     background: #f0f0f5;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;

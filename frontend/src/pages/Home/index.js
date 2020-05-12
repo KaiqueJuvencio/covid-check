@@ -40,10 +40,10 @@ export default class Home extends Component {
                         <h1>Bem-Vindo ao COVID-CHECK</h1>
 
                         <Link className="button" to="/symptoms">
-                            Checkar Sintomas
+                            Checar Sintomas
                     </Link>
                         <Link className="button" to="/prevention">
-                            Prevenções
+                            Prevenção
                     </Link>
                         <Link className="button" to="/transmission">
                             Transmissão
