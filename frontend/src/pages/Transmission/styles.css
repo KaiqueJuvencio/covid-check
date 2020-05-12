@@ -16,11 +16,17 @@
     align-items: center;
     justify-content: center;
 }
+.transmission-topic{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+}
 
 .transmission-container .content {
     width: 100%;
     padding: 96px;
     background: #f0f0f5;
+    padding-top: 500px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
@@ -43,6 +49,8 @@
     font-size: 18px;
     color: #737380;
     line-height: 32px;
+    text-indent: 2em;
+    padding-bottom: 10px;
 }
 
 .check-in-descricao{
