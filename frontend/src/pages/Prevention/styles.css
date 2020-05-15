@@ -29,7 +29,7 @@
 .prevention-container .content {
     width: 100%;
     padding: 96px;
-    padding-top: 650px;
+    padding-top: 100%;
     background: #f0f0f5;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
