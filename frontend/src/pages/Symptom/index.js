@@ -92,7 +92,7 @@ export default function SymptomsCheck() {
                             </label>
                         </div>
                         <Link className="button" to={checkVerified}>
-                            Checkar
+                            Checar
                         </Link>
                     </form>
                 </div>
