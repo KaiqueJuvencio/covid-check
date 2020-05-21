@@ -68,6 +68,18 @@ export default function SymptomsCheck() {
                             </label>
                         </div>
                         <div className="check-input">
+                            <label class="container">Perda de Paladar
+                            <input type="checkbox" id="perda-paladar" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div className="check-input">
+                            <label class="container">Perda de Olfato
+                            <input type="checkbox" id="perda-olfato" name="check-symptom" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div className="check-input">
                             <label class="container">Diarreia
                             <input type="checkbox" id="diarreia" name="check-symptom" />
                                 <span class="checkmark"></span>
