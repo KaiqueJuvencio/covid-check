@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="covid-check\frontend\src\assets\corona.png" alt="covid-check" width="120">
+  <img src="frontend\src\assets\corona.png" alt="covid-check" width="120">
 <br>
 <br>
 COVID-CHECK
