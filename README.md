@@ -17,8 +17,8 @@ COVID-CHECK
 
 [//]: # (Add your gifs/images here:)
 <div>
-  <img src="frontend\src\assets\interface.mp4" height="425">
-  <img src="frontend\src\assets\sintomas.mp4" alt="demo" height="425">
+  <img src="frontend\src\assets\desktop-interface.JPG" height="425">
+  <img src="frontend\src\assets\mobile-interface.jpeg" alt="demo" height="425">
 </div>
 
 <hr />
