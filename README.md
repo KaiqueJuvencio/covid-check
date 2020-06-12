@@ -4,9 +4,10 @@
 <br>
 <br>
 COVID-CHECK
+<p align="center">http://www.covidcheck.com.br/</p>
 </h1>
 
-<p align="center">A little description about your project</p>
+<p align="center">Projeto desenvolvido com foco na conscientização poupular em relação ao COVID-19, passando informações concretas, relevantes e de fácil entendimento. Conta também com responsividade e apreço à experiência do usuário.</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -16,8 +17,8 @@ COVID-CHECK
 
 [//]: # (Add your gifs/images here:)
 <div>
-  <img src="IMAGE_1_URL" alt="demo" height="425">
-  <img src="IMAGE_2_URL" alt="demo" height="425">
+  <img src="frontend\src\assets\covid-check-interface.mp4" height="425">
+  <img src="frontend\src\assets\sintomas.mp4" alt="demo" height="425">
 </div>
 
 <hr />
