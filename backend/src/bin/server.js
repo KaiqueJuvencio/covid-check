@@ -8,8 +8,8 @@ const onListening = () =>
 const startServer = app => app.listen(PORT, onListening);
 
 
-const initPSP = (app) => {
+const initBackend = (app) => {
   startServer(app);
 };
 
-initPSP(app);
+initBackend(app);
