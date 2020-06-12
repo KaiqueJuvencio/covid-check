@@ -1,3 +1,6 @@
+![GitHub](https://img.shields.io/github/license/KaiqueJuvencio/covid-check)
+![GitHub language count](https://img.shields.io/github/languages/count/KaiqueJuvencio/covid-check)
+![GitHub top language](https://img.shields.io/github/languages/top/KaiqueJuvencio/covid-check)
 <h1 align="center">
 <br>
   <img src="frontend\src\assets\corona.png" alt="covid-check" width="120">
