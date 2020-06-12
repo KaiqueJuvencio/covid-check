@@ -17,8 +17,10 @@ COVID-CHECK
 
 [//]: # (Add your gifs/images here:)
 <div>
-  <img src="frontend\src\assets\desktop-interface.JPG" height="425">
-  <img src="frontend\src\assets\mobile-interface.jpeg" alt="demo" height="425">
+	<h2>Desktop Interface</h2>
+  <img src="frontend\src\assets\desktop-interface.JPG" alt="desktop-interface" height="425">
+  <h2>Mobile Interface</h2>
+  <img src="frontend\src\assets\mobile-interface.jpeg" alt="mobile-interface">
 </div>
 
 <hr />
