@@ -28,6 +28,7 @@ This app features all the latest tools and practices in development!
 
 - ⚛️ **React Js** — A JavaScript library for building user interfaces
 - 💹 **Node Js** — A web framework for Node Js
+- 💹 **AWS (EC2)** — Amazon tool to deploy
 
 
 ## Build & Run - FRONTEND
